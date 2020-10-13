@@ -2,7 +2,7 @@ var a_idx = 0;
 jQuery(document).ready(function($) {
     $("body").click(function(e) {
         var a = new Array
-        ("王","卓","好","帅");
+        ("王","卓","好","帅","王","卓","好","帅","王","卓","好","帅","王","卓","好","帅");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
         var x = e.pageX,
@@ -13,8 +13,7 @@ jQuery(document).ready(function($) {
             "left": x,
             "position": "absolute",
             "font-weight": "bold",
-            "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-
+            "color": "#FF0000"
         });
         $("body").append($i);
         $i.animate({
