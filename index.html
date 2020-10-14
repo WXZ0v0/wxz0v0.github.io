@@ -1,157 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
-    <head>  
-  <!-- Title -->
-  
-  <meta charset="utf-8">
-  <meta name="applicable-device" content="pc,mobile">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, viewport-fit=cover" >
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="author" content="John Doe" />
-  <meta name="designer" content="John Doe" />
-  <meta name="keywords" content="Hexo," />
-  <meta property="og:title" content="Hexo" />
-  <meta property="og:site_name" content="http://example.com" />
-  
-    <meta property="og:description" content="" />
-    <meta name="description" content="" />
-  
-  <meta name="rating" content="general" /> 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="format-detection" content="telephone=yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" href="/images/favicon.ico">
-  <title>Hexo</title>
-  
-<link rel="stylesheet" href="/css/f25.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/main.css">
 
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+
+  <meta name="description" content="山河万里">
+<meta property="og:type" content="website">
+<meta property="og:title" content="王小卓的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="王小卓的博客">
+<meta property="og:description" content="山河万里">
+<meta property="og:locale">
+<meta property="article:author" content="wxz">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>王小卓的博客</title>
   
-  
-<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
 </head>
-<body>
-    <header class="wrapper header-wrapper">
-    <div class="container header-nav-wrapper">
-        <div class="logo"><a href="/" title="Hexo"><h1 class="title">Jin</h1></a></div>
-        <nav class="nav-wrapper">
-            
-        </nav>
-        <span class="btn-menu" id="J_header_menu">
-            <div class="inner">
-                <span class="line line-01"></span>
-                <span class="line line-02"></span>
-                <span class="line line-03"></span>
-            </div>
-        </span>
-        <div class="wrapper mb-nav-wrapper" id="J_header_menu_list">
-            <nav class="wrapper mb-nav-container">
-                
-            </nav>
-        </div>
-    </div>
-</header>
-    <section class="body-wrapper">
-        <section class="banner-wrapper">
-    <div class="container banner-container"></div>
-</section>
-<section class="wrapper menu-wrapper">
-    <nav class="container">
-        <a href="/" class="active">全部文章</a>
-    </nav>
-</section>
 
-<div class="wrapper index-wrapper">
-    <ul class="container list-container">
-    
-        <li class="post-i-wrapper">
-    <a href="/2020/10/12/two/" class="wrapper post-i-link" title="two">
-        <div class="wrapper cover">
-            <img src="/images/default_cover.jpg" alt="two">
-        </div>
-        <h3 class="wrapper title" title="two">two</h3>
-        <p class="wrapper subtitle">
-            
-        </p>
-        <div class="wrapper time">2020-10-12</div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">王小卓的博客</h1>
+      <i class="logo-line"></i>
     </a>
-</li>
-    
-        <li class="post-i-wrapper">
-    <a href="/2020/10/12/one/" class="wrapper post-i-link" title="">
-        <div class="wrapper cover">
-            <img src="/images/default_cover.jpg" alt="">
-        </div>
-        <h3 class="wrapper title" title=""></h3>
-        <p class="wrapper subtitle">
-            
-        </p>
-        <div class="wrapper time">2020-10-12</div>
-    </a>
-</li>
-    
-        <li class="post-i-wrapper">
-    <a href="/2020/10/12/hello-world/" class="wrapper post-i-link" title="Hello World">
-        <div class="wrapper cover">
-            <img src="/images/default_cover.jpg" alt="Hello World">
-        </div>
-        <h3 class="wrapper title" title="Hello World">Hello World</h3>
-        <p class="wrapper subtitle">
-            
-        </p>
-        <div class="wrapper time">2020-10-12</div>
-    </a>
-</li>
-    
-    </ul>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 </div>
         
-<div class="tips-top-wrapper">
-    <span class="tip-top-container" onclick="scrollToWindowTop()">
-        <span class="l-bar"></span>
-        <span class="r-bar"></span>
-    </span>
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">wxz</p>
+  <div class="site-description" itemprop="description">山河万里</div>
 </div>
-<footer class="wrapper footer-wrapper">
-    <div class="container"><span class="copyright">&copy; 2020 . All Rights Reserved.</span></div>
-</footer>
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+      
+
+      
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/12/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wxz">
+      <meta itemprop="description" content="山河万里">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王小卓的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-12 15:51:55" itemprop="dateCreated datePublished" datetime="2020-10-12T15:51:55+08:00">2020-10-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+  
+
+
+
+      
+
 <script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("10/12/2020 15:51:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-    } 
-setInterval("createtime()",250);
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-    </section>
-    
-<script src="/js/f25.js"></script>
+    </div>
+  </main>
 
-    
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wxz</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
-<!--动态线条背景-->
-<script type="text/javascript"
-color="99,66,33" opacity='0.5' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-</script>
-<！ - 页面点击小红心 - >
- < script type = “ text / javascript ” src = “ / js / love-click.js ” > </ script > 
-<!--浏览器搞笑标题-->
-<script type="text/javascript" src="/js/FunnyTitle.js"></script>
-<!--单击显示文字-->
-<script type="text/javascript" src="/js/click_show_text.js"></script>
