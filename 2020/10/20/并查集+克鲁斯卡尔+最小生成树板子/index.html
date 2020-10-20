@@ -17,7 +17,7 @@
   <meta name="description" content="山河万里">
   <meta name="author" content="wxz">
   <meta name="keywords" content="">
-  <title>Hello World - 王小卓的博客</title>
+  <title>王小卓的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -165,8 +165,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-10-12 15:51" pubdate>
-        2020年10月12日 下午
+      <time datetime="2020-10-20 19:52" pubdate>
+        2020年10月20日 晚上
       </time>
     </span>
   
@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      75 字
+      226 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -225,28 +225,85 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none"></h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：8 天前
+                  本文最后更新于：2 分钟前
                 
               </p>
             
             <div class="markdown-body" id="post-body">
-              <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre>
+              <pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;ext/rope&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mem(a,b) memset(a,b,sizeof(a));</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long int</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> INF = <span class="hljs-number">0x3f3f3f3f</span>;
+<span class="hljs-keyword">int</span> pre[<span class="hljs-number">5005</span>];
+<span class="hljs-keyword">int</span> n,m;
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">node1</span></span>
+<span class="hljs-class">&#123;</span>
+    <span class="hljs-keyword">int</span> x,y,w;
+&#125;node[<span class="hljs-number">200020</span>];
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;++i)
+        pre[i]=i;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(node1 x,node1 y)</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">return</span> x.w&lt;y.w;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> son)</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">int</span> deson,dad;
+    deson=son;
+   <span class="hljs-keyword">while</span>(son!=pre[son])
+        son=pre[son];
+    <span class="hljs-keyword">while</span>(deson!=pre[deson])
+    &#123;
+        dad=pre[deson];
+        pre[deson]=son;
+        deson=dad;
+    &#125;
+    <span class="hljs-keyword">return</span> son;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">kruskal</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    sort(node,node+m,cmp);
+    <span class="hljs-keyword">int</span> sum=<span class="hljs-number">0</span>,js=<span class="hljs-number">0</span>,dad1,dad2;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;m;++i)
+    &#123;
+        dad1=Find(node[i].x);
+        dad2=Find(node[i].y);
+        <span class="hljs-keyword">if</span>(dad1!=dad2)
+        &#123;
+            sum+=node[i].w;
+            pre[dad1]=dad2;
+            ++js;
+            <span class="hljs-keyword">if</span>(js==n<span class="hljs-number">-1</span>)
+                <span class="hljs-keyword">break</span>;
+        &#125;
+    &#125;
+    <span class="hljs-keyword">if</span>(js==n<span class="hljs-number">-1</span>)
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,sum);
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;orz\n&quot;</span>);
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);
+    init();
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;m;++i)
+    &#123;
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d&quot;</span>,&amp;node[i].x,&amp;node[i].y,&amp;node[i].w);
+    &#125;
+    kruskal();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
             </div>
             <hr>
@@ -263,15 +320,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/10/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%90%A7/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第一篇博客吧</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2020/10/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%90%A7/">
+                        <span class="hidden-mobile">第一篇博客吧</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -464,7 +521,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Hello World&nbsp;",
+        "&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
