@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>欧拉筛板子</title>
+    <link href="/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/"/>
+    <url>/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P3383">洛谷P3383 【模板】线性筛素数</a><br>欧拉筛板子</p><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;ext/rope&gt;</span></span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mem(a,b) memset(a,b,sizeof(a));</span><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long int</span><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> INF = <span class="hljs-number">0x3f3f3f3f</span>;<span class="hljs-keyword">bool</span> prime[<span class="hljs-number">100000010</span>];<span class="hljs-keyword">int</span> num[<span class="hljs-number">6000010</span>],cnt=<span class="hljs-number">0</span>;<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">olprime</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span><span class="hljs-comment">//欧拉筛法</span></span><span class="hljs-function"></span>&#123;    mem(prime,<span class="hljs-number">1</span>);    prime[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;;    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;++i)    &#123;        <span class="hljs-keyword">if</span>(prime[i])<span class="hljs-comment">//没筛掉</span>            num[++cnt]=i;        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;=cnt&amp;&amp;i*num[j]&lt;=n;++j)<span class="hljs-comment">//从最小质数2开始寻找最小质因数</span>        &#123;            prime[i*num[j]]=<span class="hljs-number">0</span>;            <span class="hljs-keyword">if</span>(i%num[j]==<span class="hljs-number">0</span>)<span class="hljs-comment">//寻找到最小质因数，为了防止重复筛，break出来</span>                <span class="hljs-keyword">break</span>;        &#125;    &#125;&#125;<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><span class="hljs-function"></span>&#123;    <span class="hljs-keyword">int</span> n,q;    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;n,&amp;q);    olprime(n);    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;q;++i)    &#123;        <span class="hljs-keyword">int</span> a;        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a);        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,num[a]);    &#125;    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>快速幂板子</title>
     <link href="/2020/10/20/%E5%BF%AB%E9%80%9F%E5%B9%82%E6%9D%BF%E5%AD%90/"/>
     <url>/2020/10/20/%E5%BF%AB%E9%80%9F%E5%B9%82%E6%9D%BF%E5%AD%90/</url>

@@ -17,10 +17,23 @@
   <meta name="description" content="山河万里">
   <meta name="author" content="wxz">
   <meta name="keywords" content="">
-  <title>王小卓的博客</title>
+  <title>欧拉筛板子 - 王小卓的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -43,7 +56,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -147,12 +160,53 @@
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-21 19:36" pubdate>
+        2020年10月21日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      196 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -161,214 +215,148 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">欧拉筛板子</h1>
+            
+              <p class="note note-info">
                 
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/">欧拉筛板子</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/">
-          
-          
+                  本文最后更新于：几秒前
+                
+              </p>
             
-          
-          洛谷P3383 【模板】线性筛素数欧拉筛板子
-#include&lt;bits/stdc++.h&gt;
-#include&lt;ext/rope&gt;
-using namespace std;
-#define mem(a,b) memset(a,b,sizeof(a));
-#define ll long long int
-const int INF = 0x3f3f3f3f;
-bool pri
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-21 19:36" pubdate>
-              2020-10-21
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/10/20/%E5%BF%AB%E9%80%9F%E5%B9%82%E6%9D%BF%E5%AD%90/">快速幂板子</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/20/%E5%BF%AB%E9%80%9F%E5%B9%82%E6%9D%BF%E5%AD%90/">
-          
-          
-            
-          
-          题目链接洛谷P1226
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-#define mem(a,b) memset(a,b,sizeof(a));
-#define ll long long
-const int INF = 0x3f3f3f3f;
-ll quick(ll a,ll b,ll c)//每步都要mod  c
-&#123;
-    
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-20 20:53" pubdate>
-              2020-10-20
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/10/20/%E5%B9%B6%E6%9F%A5%E9%9B%86+%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94+%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E6%9D%BF%E5%AD%90/">并查集+克鲁斯卡尔+最小生成树板子</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/20/%E5%B9%B6%E6%9F%A5%E9%9B%86+%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94+%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E6%9D%BF%E5%AD%90/">
-          
-          
-            
-          
-          #include&lt;bits/stdc++.h&gt;
-#include&lt;ext/rope&gt;
-using namespace std;
-#define mem(a,b) memset(a,b,sizeof(a));
-#define ll long long int
-const int INF = 0x3f3f3f3f;
-int pre[5005];
-int n,m;
-struct 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-20 19:52" pubdate>
-              2020-10-20
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/10/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%90%A7/">第一篇博客吧</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%90%A7/">
-          
-          
-            
-          
-          第一篇博客，没想好写点什么，随便写写吧。    大一整年都在摸鱼，摸了一年的鱼，其实在大一下就该好好开始训练学习了。可我还在玩，所以比别人差了许多。现在大二开学了，可能是该放弃一些东西的时候了吧，像游戏什么的，该减少一些了，其实我现在也玩的不多0.0，平时白天都上一天课，没课就来实验室，每天都在忙不知道忙的什么，就离谱。    大二我不能像大一那么松懈，该学习算法学习算法，而且英语、线代等等也不能
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-17 14:30" pubdate>
-              2020-10-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/10/12/hello-world/">Hello World</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/12/hello-world/">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-12 15:51" pubdate>
-              2020-10-12
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+            <div class="markdown-body" id="post-body">
+              <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3383">洛谷P3383 【模板】线性筛素数</a><br>欧拉筛板子</p>
+<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;ext/rope&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mem(a,b) memset(a,b,sizeof(a));</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long int</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> INF = <span class="hljs-number">0x3f3f3f3f</span>;
+<span class="hljs-keyword">bool</span> prime[<span class="hljs-number">100000010</span>];
+<span class="hljs-keyword">int</span> num[<span class="hljs-number">6000010</span>],cnt=<span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">olprime</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span><span class="hljs-comment">//欧拉筛法</span></span>
+<span class="hljs-function"></span>&#123;
+    mem(prime,<span class="hljs-number">1</span>);
+    prime[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;++i)
+    &#123;
+        <span class="hljs-keyword">if</span>(prime[i])<span class="hljs-comment">//没筛掉</span>
+            num[++cnt]=i;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;=cnt&amp;&amp;i*num[j]&lt;=n;++j)<span class="hljs-comment">//从最小质数2开始寻找最小质因数</span>
+        &#123;
+            prime[i*num[j]]=<span class="hljs-number">0</span>;
+            <span class="hljs-keyword">if</span>(i%num[j]==<span class="hljs-number">0</span>)<span class="hljs-comment">//寻找到最小质因数，为了防止重复筛，break出来</span>
+                <span class="hljs-keyword">break</span>;
+        &#125;
+    &#125;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">int</span> n,q;
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;n,&amp;q);
+    olprime(n);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;q;++i)
+    &#123;
+        <span class="hljs-keyword">int</span> a;
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,num[a]);
+    &#125;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre>
 
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/20/%E5%BF%AB%E9%80%9F%E5%B9%82%E6%9D%BF%E5%AD%90/">
+                        <span class="hidden-mobile">快速幂板子</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "t00algrpba1AVoI009qQtqxb-gzGzoHsz",
+          app_key: "lhCohppfeioPNgRSjsY29w0P",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: false,
+          serverURLs: "https://t00algrp.lc-cn-n1-shared.com",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
   </main>
 
@@ -471,6 +459,31 @@ Quick
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -478,7 +491,7 @@ Quick
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "wxz0v0_blog&nbsp;",
+        "欧拉筛板子&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -493,6 +506,21 @@ Quick
 
 
 
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
 
 
   <script  src="/js/local-search.js" ></script>
@@ -506,6 +534,20 @@ Quick
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 
