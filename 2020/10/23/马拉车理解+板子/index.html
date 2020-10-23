@@ -17,7 +17,7 @@
   <meta name="description" content="山河万里">
   <meta name="author" content="wxz">
   <meta name="keywords" content="">
-  <title>欧拉筛板子 - 王小卓的博客</title>
+  <title>马拉车理解+板子 - 王小卓的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -165,8 +165,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-10-21 19:36" pubdate>
-        2020年10月21日 晚上
+      <time datetime="2020-10-23 13:14" pubdate>
+        2020年10月23日 下午
       </time>
     </span>
   
@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      196 字
+      376 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      6
        分钟
     </span>
   
@@ -225,54 +225,71 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">欧拉筛板子</h1>
+            <h1 style="display: none">马拉车理解+板子</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2 天前
+                  本文最后更新于：几秒前
                 
               </p>
             
             <div class="markdown-body" id="post-body">
-              <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3383">洛谷P3383 【模板】线性筛素数</a><br>欧拉筛板子</p>
-<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
+              <p>马拉车就是在字符串中间加上’#’使得无论字符串长度为奇或偶都为偶，而且如果mx&lt;i,则为第一种情况，<br>先确定mx以内的回文串，马拉车就快在这（不用从头向两边寻找），再向两边延伸，注意的是<code>len[i]=min(mx-i,len[2*po-i]);</code>这个2*po-i是如何得来的，设i关于po的对称点为j那么len[j]=len[i]可以肯定，(i+j)/2=po可以推出j=2*po-i.<br>另一种情况是i&gt;mx就需要直接从i向两边暴力求了<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3805">洛谷P3805</a></p>
+<pre><code class="hljs arduino"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;ext/rope&gt;</span></span>
 <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mem(a,b) memset(a,b,sizeof(a));</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long int</span>
 <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> INF = <span class="hljs-number">0x3f3f3f3f</span>;
-<span class="hljs-keyword">bool</span> prime[<span class="hljs-number">100000010</span>];
-<span class="hljs-keyword">int</span> num[<span class="hljs-number">6000010</span>],cnt=<span class="hljs-number">0</span>;
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">olprime</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span><span class="hljs-comment">//欧拉筛法</span></span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">11000000</span>;
+<span class="hljs-keyword">char</span> str[maxn+<span class="hljs-number">10</span>];
+<span class="hljs-keyword">char</span> temp[maxn*<span class="hljs-number">2</span>+<span class="hljs-number">10</span>];
+<span class="hljs-keyword">int</span> len[maxn*<span class="hljs-number">2</span>+<span class="hljs-number">10</span>];
+<span class="hljs-keyword">int</span> max1=<span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> len1)</span></span>
 <span class="hljs-function"></span>&#123;
-    mem(prime,<span class="hljs-number">1</span>);
-    prime[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;;
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;++i)
+    temp[<span class="hljs-number">0</span>]=<span class="hljs-string">&#x27;@&#x27;</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">2</span>*len1;i+=<span class="hljs-number">2</span>)
     &#123;
-        <span class="hljs-keyword">if</span>(prime[i])<span class="hljs-comment">//没筛掉</span>
-            num[++cnt]=i;
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;=cnt&amp;&amp;i*num[j]&lt;=n;++j)<span class="hljs-comment">//从最小质数2开始寻找最小质因数</span>
+        temp[i]=<span class="hljs-string">&#x27;#&#x27;</span>;
+        temp[i+<span class="hljs-number">1</span>]=str[i/<span class="hljs-number">2</span>];
+    &#125;
+    temp[<span class="hljs-number">2</span>*len1+<span class="hljs-number">1</span>]=<span class="hljs-string">&#x27;#&#x27;</span>;
+    temp[<span class="hljs-number">2</span>*len1+<span class="hljs-number">2</span>]=<span class="hljs-string">&#x27;$&#x27;</span>;
+    temp[<span class="hljs-number">2</span>*len1+<span class="hljs-number">3</span>]=<span class="hljs-number">0</span>;
+&#125;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">manacher</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nlen)</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">int</span> mx=<span class="hljs-number">0</span>,ans=<span class="hljs-number">0</span>,po=<span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=nlen;++i)
+    &#123;
+        <span class="hljs-keyword">if</span>(mx&gt;i)
+            len[i]=<span class="hljs-built_in">min</span>(mx-i,len[<span class="hljs-number">2</span>*po-i]);<span class="hljs-comment">//(i+j)/2==po推出j=2*po-i，且右侧不得大于mx</span>
+        <span class="hljs-keyword">else</span>
+            len[i]=<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span>(temp[i-len[i]]==temp[i+len[i]])
+            len[i]++;
+        <span class="hljs-keyword">if</span>(i+len[i]&gt;mx)
         &#123;
-            prime[i*num[j]]=<span class="hljs-number">0</span>;
-            <span class="hljs-keyword">if</span>(i%num[j]==<span class="hljs-number">0</span>)<span class="hljs-comment">//寻找到最小质因数，为了防止重复筛，break出来</span>
-                <span class="hljs-keyword">break</span>;
+            po=i;
+            mx=i+len[i];
         &#125;
+        len[i]--;
+        <span class="hljs-keyword">if</span>(len[i]&gt;max1)
+            max1=len[i];
     &#125;
 &#125;
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
 <span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">int</span> n,q;
-    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;n,&amp;q);
-    olprime(n);
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;q;++i)
-    &#123;
-        <span class="hljs-keyword">int</span> a;
-        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a);
-        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,num[a]);
-    &#125;
+    <span class="hljs-keyword">int</span> len1,nlen;
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>,str);
+    len1=<span class="hljs-built_in">strlen</span>(str);
+    init(len1);
+    nlen=<span class="hljs-built_in">strlen</span>(temp);
+    manacher(nlen);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,max1);
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;
-</code></pre>
+&#125;</code></pre>
 
 
             </div>
@@ -290,18 +307,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/10/23/%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%90%86%E8%A7%A3+%E6%9D%BF%E5%AD%90/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">马拉车理解+板子</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/10/20/%E5%BF%AB%E9%80%9F%E5%B9%82%E6%9D%BF%E5%AD%90/">
-                        <span class="hidden-mobile">快速幂板子</span>
+                      <a href="/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/">
+                        <span class="hidden-mobile">欧拉筛板子</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -497,7 +508,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "欧拉筛板子&nbsp;",
+        "马拉车理解+板子&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
