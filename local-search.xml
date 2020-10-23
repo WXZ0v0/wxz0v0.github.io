@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>马拉车理解+板子</title>
+    <link href="/2020/10/23/%E9%A9%AC%E6%8B%89%E8%BD%A6manacher%E6%9D%BF%E5%AD%90%20/"/>
+    <url>/2020/10/23/%E9%A9%AC%E6%8B%89%E8%BD%A6manacher%E6%9D%BF%E5%AD%90%20/</url>
+    
+    <content type="html"><![CDATA[<p>马拉车就是在字符串中间加上’#’使得无论字符串长度为奇或偶都为偶，而且如果mx&lt;i,则为第一种情况，<br>先确定mx以内的回文串，马拉车就快在这（不用从头向两边寻找），再向两边延伸，注意的是<code>len[i]=min(mx-i,len[2*po-i]);</code>这个2*po-i是如何得来的，设i关于po的对称点为j那么len[j]=len[i]可以肯定，(i+j)/2=po可以推出j=2*po-i.<br>另一种情况是i&gt;mx就需要直接从i向两边暴力求了<br><a href="https://www.luogu.com.cn/problem/P3805">洛谷P3805</a></p><p>#include&lt;bits/stdc++.h&gt;<br>#include&lt;ext/rope&gt;<br>using namespace std;<br>#define mem(a,b) memset(a,b,sizeof(a));<br>#define ll long long int<br>const int INF = 0x3f3f3f3f;<br>const int maxn = 11000000;<br>char str[maxn+10];<br>char temp[maxn<em>2+10];<br>int len[maxn</em>2+10];<br>int max1=0;<br>void init(int len1)<br>{<br>    temp[0]=’@’;<br>    for(int i=1;i&lt;=2*len1;i+=2)<br>    {<br>        temp[i]=’#’;<br>        temp[i+1]=str[i/2];<br>    }<br>    temp[2*len1+1]=’#’;<br>    temp[2*len1+2]=’$’;<br>    temp[2*len1+3]=0;<br>}<br>void manacher(int nlen)<br>{<br>    int mx=0,ans=0,po=0;<br>    for(int i=1;i&lt;=nlen;++i)<br>    {<br>        if(mx&gt;i)<br>            len[i]=min(mx-i,len[2<em>po-i]);//(i+j)/2==po推出j=2</em>po-i，且右侧不得大于mx<br>        else<br>            len[i]=1;<br>        while(temp[i-len[i]]==temp[i+len[i]])<br>            len[i]++;<br>        if(i+len[i]&gt;mx)<br>        {<br>            po=i;<br>            mx=i+len[i];<br>        }<br>        len[i]–;<br>        if(len[i]&gt;max1)<br>            max1=len[i];<br>    }<br>}<br>int main()<br>{<br>    int len1,nlen;<br>    scanf(“%s”,str);<br>    len1=strlen(str);<br>    init(len1);<br>    nlen=strlen(temp);<br>    manacher(nlen);<br>    printf(“%d\n”,max1);<br>    return 0;<br>}</p><pre><code></code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>欧拉筛板子</title>
     <link href="/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/"/>
     <url>/2020/10/21/%E6%AC%A7%E6%8B%89%E7%AD%9B%E6%9D%BF%E5%AD%90/</url>
@@ -43,11 +56,11 @@
   
   
   <entry>
-    <title>第一篇博客吧</title>
+    <title></title>
     <link href="/2020/10/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%90%A7/"/>
     <url>/2020/10/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%90%A7/</url>
     
-    <content type="html"><![CDATA[<p>第一篇博客，没想好写点什么，随便写写吧。<br>    大一整年都在摸鱼，摸了一年的鱼，其实在大一下就该好好开始训练学习了。可我还在玩，所以比别人差了许多。现在大二开学了，可能是该放弃一些东西的时候了吧，像游戏什么的，该减少一些了，其实我现在也玩的不多0.0，平时白天都上一天课，没课就来实验室，每天都在忙不知道忙的什么，就离谱。<br>    大二我不能像大一那么松懈，该学习算法学习算法，而且英语、线代等等也不能落下，感觉时间过得挺快的0.0.<br>    其实也就没什么好说的，就说这些吧，我去学会线代11111.</p>]]></content>
+    <content type="html"><![CDATA[<pre><code>---title: 第一篇博客吧---</code></pre><p>第一篇博客，没想好写点什么，随便写写吧。<br>    大一整年都在摸鱼，摸了一年的鱼，其实在大一下就该好好开始训练学习了。可我还在玩，所以比别人差了许多。现在大二开学了，可能是该放弃一些东西的时候了吧，像游戏什么的，该减少一些了，其实我现在也玩的不多0.0，平时白天都上一天课，没课就来实验室，每天都在忙不知道忙的什么，就离谱。<br>    大二我不能像大一那么松懈，该学习算法学习算法，而且英语、线代等等也不能落下，感觉时间过得挺快的0.0.<br>    其实也就没什么好说的，就说这些吧，我去学会线代11111.</p>]]></content>
     
     
     
